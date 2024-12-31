@@ -8,6 +8,10 @@ This project consists of the following main components:
 2. **Server**: The back-end part of the application built with Node.js and Express.
 3. **Database**: PostgreSQL is used as the database to store application data.
 
+# Basic funcionality
+
+The user uploads a csv file and it gets inserted in a Postgres table
+
 ## How to Run the App
 
 Follow these steps to run the application:
@@ -41,38 +45,9 @@ Follow these steps to run the application:
 5. **Access the application**:
   Open your browser and go to `http://localhost:your_port`.
 
-## Scripts
-
-- `npm start`: Starts both the client and server concurrently.
-- `npm run server`: Starts the Express server.
-- `npm run client`: Starts the React development server.
 
 ## License
 
 This project is licensed under the MIT License.
   PORT=your_port
   ```
-
-4. **Run the server**:
-  ```sh
-  npm run server
-  ```
-
-5. **Run the client**:
-  Open a new terminal window and run:
-  ```sh
-  npm run client
-  ```
-
-6. **Access the application**:
-  Open your browser and go to `http://localhost:your_port`.
-
-## Scripts
-
-- `npm run server`: Starts the Express server.
-- `npm run client`: Starts the React development server.
-- `npm run dev`: Runs both the client and server concurrently.
-
-## License
-
-This project is licensed under the MIT License.
