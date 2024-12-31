@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
 import './app.css';
-import ReactImage from './react.png';
 
 export default class App extends Component {
-  state = { username: null };
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('csvFile', document.getElementById('csvFile').files[0]);
 
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
-  }
+    try {
+      const response = await fetch('/api/uploadCsv', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        alert('File uploaded successfully');
+      } else {
+        const errorText = await response.text();
+        alert(`File upload failed: ${errorText}`);
+      }
+    } catch (error) {
+      alert(`File upload failed: ${error.message}`);
+    }
+  };
 
   render() {
-    const { username } = this.state;
     return (
-      <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
+      <div className="container">
+        <h1>Upload CSV File</h1>
+        <form id="uploadForm" onSubmit={this.handleSubmit} enctype="multipart/form-data">
+          <input type="file" id="csvFile" name="csvFile" accept=".csv" />
+          <button type="submit">Upload</button>
+        </form>
       </div>
     );
   }
