@@ -1,0 +1,19 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "Node.js/Express backend for Full Stack Spark",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "pg": "^8.6.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
