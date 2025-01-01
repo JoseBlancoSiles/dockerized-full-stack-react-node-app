@@ -1,6 +1,20 @@
-.vscode
-node_modules
-dist
-*.log
-yarn.lock
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment variables
 .env
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
