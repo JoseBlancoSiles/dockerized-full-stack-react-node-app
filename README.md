@@ -37,11 +37,11 @@ Follow these steps to run the application:
 2. **Set up environment variables**:
     Create a `.env` file in the root directory and add the following:
     ```sh
-    DB_USER=your_db_user
-    DB_HOST=your_db_host
-    DB_DATABASE=your_db_name
-    DB_PASSWORD=your_db_password
-    DB_PORT=your_db_port
+    DB_USER=your_db_user # postgres
+    DB_HOST=your_db_host # postgres
+    DB_DATABASE=your_db_name # postgres
+    DB_PASSWORD=your_db_password # choose your password
+    DB_PORT=your_db_port # 5432 suggested
     ```
 
 3. **Start the application using Docker Compose**:
