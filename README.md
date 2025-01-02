@@ -30,18 +30,18 @@ Follow these steps to run the application:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/simple-react-full-stack.git
-    cd simple-react-full-stack
+    https://github.com/JoseBlancoSiles/dockerized-full-stack-react-node-app.git
+    cd dockerized-full-stack-react-node-app
     ```
 
 2. **Set up environment variables**:
     Create a `.env` file in the root directory and add the following:
     ```sh
-    DB_USER=your_db_user
-    DB_HOST=your_db_host
-    DB_DATABASE=your_db_name
-    DB_PASSWORD=your_db_password
-    DB_PORT=your_db_port
+    DB_USER=your_db_user # postgres
+    DB_HOST=your_db_host # postgres
+    DB_DATABASE=your_db_name # postgres
+    DB_PASSWORD=your_db_password # choose your password
+    DB_PORT=your_db_port # 5432 suggested
     ```
 
 3. **Start the application using Docker Compose**:
@@ -50,7 +50,17 @@ Follow these steps to run the application:
     ```
 
 4. **Access the application**:
-    Open your browser and go to `http://localhost`.
+    Open your browser and go to `http://localhost:3000`.
+    Ping the server
+    response should be : pong!
+
+   After that, you can check if that response was inserted into the postgres table:
+   ```sh
+   docker exec -it postgres psql -U postgres
+   ```
+   ```sql
+   SELECT * FROM pings;
+   ```
 
 ## Architecture
 
