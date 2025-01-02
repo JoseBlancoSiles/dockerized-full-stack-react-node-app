@@ -50,7 +50,17 @@ Follow these steps to run the application:
     ```
 
 4. **Access the application**:
-    Open your browser and go to `http://localhost`.
+    Open your browser and go to `http://localhost:3000`.
+    Ping the server
+    response should be : pong!
+
+   After that, you can check if that response was inserted into the postgres table:
+   ```sh
+   docker exec -it postgres psql -U postgres
+   ```
+   ```sql
+   SELECT * FROM pings;
+   ```
 
 ## Architecture
 
