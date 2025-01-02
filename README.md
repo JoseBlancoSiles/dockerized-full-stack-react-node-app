@@ -10,7 +10,7 @@ This project consists of the following main components:
 
 # Basic funcionality
 
-The user uploads a csv file and it gets inserted in a Postgres table
+The user pings to the node server from the front end and the response gets inserted int a postgres table
 
 ## How to Run the App
 

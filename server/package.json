@@ -4,7 +4,8 @@
   "description": "Node.js/Express backend for Full Stack Spark",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
@@ -13,7 +14,9 @@
     "pg": "^8.6.0",
     "cors": "^2.8.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
   "author": "",
   "license": "ISC"
 }
