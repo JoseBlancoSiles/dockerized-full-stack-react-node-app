@@ -1,5 +1,9 @@
 # Simple Full Stack app
 
+In this repo you'll find the code to run a basic dockerized web app.
+
+This can serve as starting point for ANY full stack dockerized app! 
+
 ## Main Components
 
 This project consists of the following main components:
@@ -48,6 +52,6 @@ Follow these steps to run the application:
 4. **Access the application**:
     Open your browser and go to `http://localhost`.
 
-## License
+## Architecture
 
-This project is licensed under the MIT License.
+Here is a basic architecture diagram of the application:
