@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class App extends Component {
   handlePing = async () => {
     try {
-      const response = await fetch('http://localhost:8080/ping'); // Use localhost and the exposed port
+      const response = await fetch('http://localhost/ping'); // Use localhost and the exposed port
       console.log('Attempting to ping server...');
       if (response.ok) {
         const json = await response.json();
