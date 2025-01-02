@@ -30,8 +30,8 @@ Follow these steps to run the application:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/simple-react-full-stack.git
-    cd simple-react-full-stack
+    https://github.com/JoseBlancoSiles/dockerized-full-stack-react-node-app.git
+    cd dockerized-full-stack-react-node-app
     ```
 
 2. **Set up environment variables**:
