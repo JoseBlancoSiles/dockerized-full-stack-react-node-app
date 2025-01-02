@@ -55,3 +55,10 @@ Follow these steps to run the application:
 ## Architecture
 
 Here is a basic architecture diagram of the application:
+
+![Architecture Diagram](assets/architecture.png)
+
+## License
+
+This project is licensed under the MIT License.
+
