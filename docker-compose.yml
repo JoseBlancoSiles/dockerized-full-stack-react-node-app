@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  node-server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: node-server
+    networks:
+      - my-network
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      DB_USER: ${DB_USER}
+      DB_HOST: ${DB_HOST}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+    restart: unless-stopped
+
+  react-client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: react-client
+    networks:
+      - my-network
+    ports:
+      - "3000:3000"
+    depends_on:
+      - node-server
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    networks:
+      - my-network
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  my-network:
+    name: my-network
